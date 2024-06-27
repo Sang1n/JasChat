@@ -18,7 +18,7 @@ public class ChatHub : Hub<IChatClient>
 
         await Clients
             .Group(connection.ChatRoom)
-            .ReceiveMessage("Admin", $"{connection.UserName} присоединился к чату");
+            .ReceiveMessage("AdminChat", $"{connection.UserName} присоединился к чату");
     }
 }
 
